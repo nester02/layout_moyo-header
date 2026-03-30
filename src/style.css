@@ -7,6 +7,7 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -38,7 +39,6 @@ body {
 }
 
 .header__nav ul {
-  height: 60px;
   list-style: none;
   display: flex;
   align-items: center;
@@ -55,17 +55,18 @@ body {
   font-size: 12px;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  line-height: 60px;
 }
 
 .header__nav-link:hover {
   color: var(--blue);
 }
 
-.is-active {
+a.is-active {
   color: var(--blue);
 }
 
-.is-active::after {
+a.is-active::after {
   content: '';
   position: absolute;
   left: 0;
